@@ -1,0 +1,54 @@
+body{
+  margin: 0;
+  height: 100vh;
+}
+
+header {
+  background-color: gray;
+  height: 20%;
+}
+
+section {
+  display: grid;
+  height: 60%;
+  grid-template-columns: auto 30%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: 
+    "a a c"
+    "b b c";
+}
+
+.a {
+  background-color: red;
+  grid-area: a;
+}
+
+.b {
+  background-color: orange;
+  grid-area: b;
+}
+
+.c {
+  background-color: yellow;
+  grid-area: c;
+}
+
+footer {
+  background-color: gray;
+  height: 20%;
+}
+
+@media screen and (max-width: 600px) {
+  header, footer {
+    height: 10%;
+  }
+  section {
+    height: 80%;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+      "a"
+      "b"
+      "c";
+  }
+}
